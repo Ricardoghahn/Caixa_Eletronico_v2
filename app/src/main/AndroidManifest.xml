@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PosLogin" />
-        <activity android:name=".ListaExtrato"></activity>
+        <activity android:name=".ListaExtrato" />
+        <activity android:name=".ConsultarSaldo"></activity>
     </application>
 
 </manifest>
