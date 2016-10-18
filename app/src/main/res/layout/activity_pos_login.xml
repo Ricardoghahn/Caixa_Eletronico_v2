@@ -7,29 +7,71 @@
     android:orientation="vertical"
     tools:context=".PosLogin">
 
-    <TextView
-        android:id="@+id/tvAge"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/tvCon"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvCon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/bExtrato"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/bExtrato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="consultarExtrato"
+            android:text="extrato"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/bSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saldo"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:onClick="consultarExtrato"
-        android:text="consultar extrato"
-        android:textAllCaps="true" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
+        <Button
+            android:id="@+id/bTransferencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="transferência"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/bSacar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sacar"
+            android:textAllCaps="true" />
+    </LinearLayout>
 </LinearLayout>
