@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CaixaEletronico</string>
+    <string name="agencia">Agência</string>
+    <string name="conta">Conta</string>
+</resources>
