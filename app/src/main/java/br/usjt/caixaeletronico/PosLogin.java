@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,8 @@ public class PosLogin extends AppCompatActivity {
 
     public final static String saldo = "br.usjt.caixaeletronico.SALDO";
     public static double saldoTotal = 0;
-    double saldoCon1234;
+    double saldoCon121212 = 105.90;
+    double saldoCon232323 = 190.80;
     String agencia;
     String conta;
 
@@ -40,12 +42,19 @@ public class PosLogin extends AppCompatActivity {
     }
 
     public void consultarSaldo(View view) {
-        if (agencia.equals("1234") && conta.equals("9876")) {
-            saldoCon1234 = 987.62;
-            saldoTotal = saldoCon1234;
+        if (agencia.equals("1234") && conta.equals("121212")) {
+            saldoTotal = saldoCon121212;
             Intent intent = new Intent(this, ConsultarSaldo.class);
             intent.putExtra(saldo, saldoTotal);
             startActivity(intent);
+        } else if (agencia.equals("9876") && conta.equals("232323")) {
+            saldoTotal = saldoCon232323;
+            Intent intent = new Intent(this, ConsultarSaldo.class);
+            intent.putExtra(saldo, saldoTotal);
+            startActivity(intent);
+        } else {
+            String msg = "Agência e/ou Conta incorretos";
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         }
     }
 }

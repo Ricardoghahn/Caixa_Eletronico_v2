@@ -19,5 +19,4 @@
         <activity android:name=".ListaExtrato" />
         <activity android:name=".ConsultarSaldo"></activity>
     </application>
-
 </manifest>
