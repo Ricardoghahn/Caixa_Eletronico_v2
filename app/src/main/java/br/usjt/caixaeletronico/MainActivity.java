@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     public final static String agencia = "br.usjt.caixaeletronico.AGENCIA";
     public final static String conta = "br.usjt.caixaeletronico.CONTA";
+    public static double saldoTotal;
     String age;
     String con;
 
@@ -20,9 +21,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /* if (dbHelper.selectCliente(1234)) {
+            String msg = "Agência 1234 já inserida";
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        } else { */
+        //}
+
+        /* if (dbHelper.selectCliente(9876)) {
+            String msg = "Agência 9876 já inserida";
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        } else { */
+        //dbHelper.insertCliente(new Cliente(0, 9876, 232323, 850.00));
+        // }
     }
 
-    public void logar(View view){
+    public void logar(View view) {
         EditText editTextAge = (EditText) findViewById(R.id.agencia);
         EditText editTextCon = (EditText) findViewById(R.id.conta);
         age = editTextAge.getText().toString();

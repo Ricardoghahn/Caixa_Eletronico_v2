@@ -42,6 +42,7 @@ public class PosLogin extends AppCompatActivity {
     }
 
     public void consultarSaldo(View view) {
+
         if (agencia.equals("1234") && conta.equals("121212")) {
             saldoTotal = saldoCon121212;
             Intent intent = new Intent(this, ConsultarSaldo.class);
@@ -50,6 +51,23 @@ public class PosLogin extends AppCompatActivity {
         } else if (agencia.equals("9876") && conta.equals("232323")) {
             saldoTotal = saldoCon232323;
             Intent intent = new Intent(this, ConsultarSaldo.class);
+            intent.putExtra(saldo, saldoTotal);
+            startActivity(intent);
+        } else {
+            String msg = "Agência e/ou Conta incorretos";
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void efetuarSaque(View view) {
+        if (agencia.equals("1234") && conta.equals("121212")) {
+            saldoTotal = saldoCon121212;
+            Intent intent = new Intent(this, EfetuarSaque.class);
+            intent.putExtra(saldo, saldoTotal);
+            startActivity(intent);
+        } else if (agencia.equals("9876") && conta.equals("232323")) {
+            saldoTotal = saldoCon232323;
+            Intent intent = new Intent(this, EfetuarSaque.class);
             intent.putExtra(saldo, saldoTotal);
             startActivity(intent);
         } else {

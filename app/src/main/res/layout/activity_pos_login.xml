@@ -10,8 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvAge"
@@ -34,8 +34,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/bExtrato"
@@ -49,8 +49,8 @@
             android:id="@+id/bSaldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="saldo"
             android:onClick="consultarSaldo"
+            android:text="saldo"
             android:textAllCaps="true" />
 
     </LinearLayout>
@@ -58,8 +58,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/bTransferencia"
@@ -72,6 +72,7 @@
             android:id="@+id/bSacar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="efetuarSaque"
             android:text="sacar"
             android:textAllCaps="true" />
     </LinearLayout>

@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".PosLogin" />
         <activity android:name=".ListaExtrato" />
-        <activity android:name=".ConsultarSaldo"></activity>
+        <activity android:name=".ConsultarSaldo" />
+        <activity android:name=".EfetuarSaque"></activity>
     </application>
+
 </manifest>
