@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:layout_margin="25dp"
+    android:orientation="vertical"
     tools:context="br.usjt.caixaeletronico.EfetuarSaque">
 
     <EditText
@@ -11,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
         android:hint="R$0,00"
         android:inputType="numberDecimal"
         android:padding="8dp" />
@@ -18,9 +20,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:onClick="realizarSaque"
         android:padding="8dp"
         android:text="Sacar"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="#ffffff" />
 
 </LinearLayout>

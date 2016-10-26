@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="25dp"
     android:orientation="vertical"
     tools:context="br.usjt.caixaeletronico.MainActivity">
 
@@ -13,7 +14,9 @@
         android:layout_gravity="center_horizontal"
         android:hint="@string/agencia"
         android:inputType="numberDecimal"
-        android:padding="8dp" />
+        android:maxLength="4"
+        android:padding="8dp"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/conta"
@@ -22,7 +25,21 @@
         android:layout_gravity="center_horizontal"
         android:hint="@string/conta"
         android:inputType="numberDecimal"
-        android:padding="8dp" />
+        android:maxLength="6"
+        android:padding="8dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:hint="Senha"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:padding="8dp"
+        android:textAlignment="center" />
 
     <Button
         android:layout_width="wrap_content"
@@ -31,5 +48,6 @@
         android:onClick="logar"
         android:padding="8dp"
         android:text="Entrar"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="#ffffff" />
 </LinearLayout>

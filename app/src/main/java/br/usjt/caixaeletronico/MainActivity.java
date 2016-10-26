@@ -39,16 +39,18 @@ public class MainActivity extends AppCompatActivity {
     public void logar(View view) {
         EditText editTextAge = (EditText) findViewById(R.id.agencia);
         EditText editTextCon = (EditText) findViewById(R.id.conta);
+        EditText editTextSen = (EditText) findViewById(R.id.senha);
         age = editTextAge.getText().toString();
         con = editTextCon.getText().toString();
+        String senha = editTextSen.getText().toString();
 
-        if ((age.equals("1234") && con.equals("121212")) || (age.equals("9876") && con.equals("232323"))) {
+        if ((age.equals("1234") && con.equals("121212") && senha.equals("1234")) || (age.equals("9876") && con.equals("232323") && senha.equals("9876"))) {
             Intent intent = new Intent(this, PosLogin.class);
             intent.putExtra(agencia, age);
             intent.putExtra(conta, con);
             startActivity(intent);
         } else {
-            String msg = "Agência e/ou Conta incorretos";
+            String msg = "Dados incorretos";
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         }
     }

@@ -24,10 +24,10 @@ public class ListaExtrato extends AppCompatActivity {
 
     public ArrayList<String>geraExtrato(){
         ArrayList<String> extrato = new ArrayList<>();
-        extrato.add("SAQUE: " + "R$ 60,00 " + "12/10/2016");
-        extrato.add("DEPOSITO: " + "R$ 25,00 " + "13/10/2016");
-        extrato.add("SAQUE: " + "R$ 30,00 " + "14/10/2016");
-        extrato.add("TRANSFERENCIA: " + "R$ 47,00 " + "15/10/2016");
+        extrato.add("22/10/2016 " + "SAQUE: " + "R$ 15,00");
+        extrato.add("23/10/2016 " + "SAQUE: " + "R$ 25,00");
+        extrato.add("24/10/2016 " + "SAQUE: " + "R$ 40,00");
+        extrato.add("25/10/2016 " + "SAQUE: " + "R$ 10,00");
         return extrato;
     }
 }

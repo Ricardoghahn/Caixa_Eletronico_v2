@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="25dp"
         android:orientation="vertical">
 
         <TextView
@@ -39,19 +40,21 @@
 
         <Button
             android:id="@+id/bExtrato"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:onClick="consultarExtrato"
             android:text="extrato"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/bSaldo"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:onClick="consultarSaldo"
             android:text="saldo"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
 
@@ -63,17 +66,19 @@
 
         <Button
             android:id="@+id/bTransferencia"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="transferência"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/bSacar"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:onClick="efetuarSaque"
             android:text="sacar"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:textColor="#ffffff" />
     </LinearLayout>
 </LinearLayout>
