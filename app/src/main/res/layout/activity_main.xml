@@ -7,39 +7,79 @@
     android:orientation="vertical"
     tools:context="br.usjt.caixaeletronico.MainActivity">
 
-    <EditText
-        android:id="@+id/agencia"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="@string/agencia"
-        android:inputType="numberDecimal"
-        android:maxLength="4"
-        android:padding="8dp"
-        android:textAlignment="center" />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/conta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="@string/conta"
-        android:inputType="numberDecimal"
-        android:maxLength="6"
-        android:padding="8dp"
-        android:textAlignment="center" />
+        <ImageView
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/agencia"/>
 
-    <EditText
-        android:id="@+id/senha"
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/agencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/agencia"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:padding="8dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="25dp"
-        android:hint="Senha"
-        android:inputType="numberPassword"
-        android:maxLength="4"
-        android:padding="8dp"
-        android:textAlignment="center" />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/conta"/>
+
+        <EditText
+            android:id="@+id/conta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="   Conta"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:padding="8dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/senha"/>
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:hint=" Senha"
+            android:inputType="textPassword"
+            android:maxLength="4"
+            android:padding="8dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -49,5 +89,6 @@
         android:padding="8dp"
         android:text="Entrar"
         android:textAllCaps="true"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:drawableBottom="@drawable/oie_transparent"/>
 </LinearLayout>

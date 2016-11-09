@@ -39,6 +39,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:drawableLeft="@drawable/extrato"
             android:id="@+id/bExtrato"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
@@ -48,10 +49,10 @@
             android:textColor="#ffffff" />
 
         <Button
+            android:drawableLeft="@drawable/saldo"
             android:id="@+id/bSaldo"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:onClick="consultarSaldo"
             android:text="saldo"
             android:textAllCaps="true"
             android:textColor="#ffffff" />
@@ -65,6 +66,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:drawableLeft="@drawable/transferencia"
             android:id="@+id/bTransferencia"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
@@ -73,6 +75,7 @@
             android:textColor="#ffffff" />
 
         <Button
+            android:drawableLeft="@drawable/sacar"
             android:id="@+id/bSacar"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
