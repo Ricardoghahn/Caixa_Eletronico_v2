@@ -1,8 +1,8 @@
 package br.usjt.caixaeletronico;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -36,6 +36,41 @@ public class EfetuarSaque extends AppCompatActivity {
         //final EditText editTextValor = (EditText) findViewById(R.id.etValor);
         sValor = valorMonetario.getText().toString();
         sValor = sValor.replaceAll("[R$]", "").replaceAll("[,]", ".");
+
+        int pontos = 0;
+        String ponto = ".";
+        char[] valorSaque = sValor.toCharArray();
+        int length = (sValor.length());
+
+        char[] valorInvertido = new char[length];
+        for (int i = 0; i < valorInvertido.length; i++) {
+            length--;
+            valorInvertido[i] = valorSaque[length];
+        }
+
+        for (int i = 0; i < sValor.length(); i++) {
+            if (ponto.equals(String.valueOf(valorInvertido[i]))) {
+                pontos += 1;
+                if (pontos > 1) {
+                    StringBuilder meuSaque = new StringBuilder(String.valueOf(valorInvertido));
+                    meuSaque.setCharAt(i, ' ');
+                    sValor = String.valueOf(meuSaque);
+                }
+            }
+        }
+        if (pontos > 1) {
+            valorInvertido = sValor.toCharArray();
+            int lengthCorreto = sValor.length();
+
+            char[] valorCorreto = new char[lengthCorreto];
+            for (int j = 0; j < valorCorreto.length; j++) {
+                lengthCorreto = lengthCorreto - 1;
+                valorCorreto[j] = valorInvertido[lengthCorreto];
+            }
+
+            sValor = String.valueOf(valorCorreto);
+            sValor = sValor.replaceAll("[ ]", "");
+        }
         dValor = Double.parseDouble(sValor);
 
         if (dValor > dSaldo) {
@@ -87,7 +122,7 @@ public class EfetuarSaque extends AppCompatActivity {
 
             if (hasMask) {
                 // Retiramos a máscara.
-                str = str.replaceAll("[R$]", "").replaceAll("[,]", "").replaceAll("[.]", "");
+                str = str.replaceAll("[R$]", "").replaceAll("[,]", "").replaceAll("[.]", "").replaceAll("[ ]", "");
             }
 
 
